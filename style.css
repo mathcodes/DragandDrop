@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+  --border-color: #5208344a;
+  --background-color: #16155c;
+  --text-color: #0b7fd8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #141324;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  /* margin: 20px 40px 40px 40px; */
+  font-family: "Calibri", sans-serif;
+  color: var(--text-color);
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin: -20px;
+  width: 120%;
+  border-bottom: 5px solid var(--text-color);
+}
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
+}
+
+.draggable-list li {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex: 1;
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  height: 90px;
+  width: 60px;
+}
+
+.draggable-list li.over .draggable, .hover {
+  background-color: var(--text-color);
+  color:#000;
+}
+
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .person-name {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .person-name {
+  color: #ff3838;
+  font-weight: bold;
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
+}
+
+.check-btn {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
+
+.person-name {
+  font-size: 1.2rem;
+}
