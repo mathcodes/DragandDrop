@@ -18,7 +18,7 @@ let dragStartIndex;
 
 createList();
 
-// Insert list items into DOM
+// Insert list items into DOM using chained methods map, sort, map, and forEach
 function createList() {
   [...jazzMusicians]
     .map(a => ({ value: a, sort: Math.random() }))
@@ -38,7 +38,6 @@ function createList() {
       `;
 
       listItems.push(listItem);
-
       draggable_list.appendChild(listItem);
     });
 
@@ -69,7 +68,6 @@ function dragDrop() {
   // console.log('Event: ', 'drop');
   const dragEndIndex = +this.getAttribute('data-index');
   swapItems(dragStartIndex, dragEndIndex);
-
   this.classList.remove('over');
 }
 
@@ -77,7 +75,6 @@ function dragDrop() {
 function swapItems(fromIndex, toIndex) {
   const itemOne = listItems[fromIndex].querySelector('.draggable');
   const itemTwo = listItems[toIndex].querySelector('.draggable');
-
   listItems[fromIndex].appendChild(itemTwo);
   listItems[toIndex].appendChild(itemOne);
 }
@@ -86,7 +83,6 @@ function swapItems(fromIndex, toIndex) {
 function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector('.draggable').innerText.trim();
-
     if (personName !== jazzMusicians[index]) {
       listItem.classList.add('wrong');
     } else {
@@ -99,7 +95,6 @@ function checkOrder() {
 function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable');
   const dragListItems = document.querySelectorAll('.draggable-list li');
-
   draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', dragStart);
   });

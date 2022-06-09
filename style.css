@@ -4,6 +4,10 @@
   --border-color: #5208344a;
   --background-color: #16155c;
   --text-color: #0b7fd8;
+  --black-color: #00000055;
+  --accent1-color:#ff3838;
+  --accent2-color:#3ae374;
+  --dark-color: #141324;
 }
 
 * {
@@ -11,7 +15,7 @@
 }
 
 body {
-  background: #141324;
+  background: var(--dark-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +27,7 @@ body {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--black-color);
   text-align: center;
   margin: -20px;
   width: 120%;
@@ -38,7 +42,7 @@ header {
 }
 
 .draggable-list li {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--black-color);
   display: flex;
   flex: 1;
   border: 2px solid var(--text-color);
@@ -61,7 +65,7 @@ header {
 
 .draggable-list li.over .draggable, .hover {
   background-color: var(--text-color);
-  color:#000;
+  color:var(--black-color);
 }
 
 .draggable-list .person-name {
@@ -69,11 +73,11 @@ header {
 }
 
 .draggable-list li.right .person-name {
-  color: #3ae374;
+  color: var(--accent2-color);
 }
 
 .draggable-list li.wrong .person-name {
-  color: #ff3838;
+  color: var(--accent1-color);
   font-weight: bold;
 }
 
