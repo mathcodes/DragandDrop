@@ -2,6 +2,40 @@
 
 Simple but effective drag and drop like with order checker for many use cases, namely studying / TechED implementations.
 
+### Snippets of some JS blocks used in this project: 
+
+```js
+function addEventListeners() {
+  const draggables = document.querySelectorAll('.draggable');
+  const dragListItems = document.querySelectorAll('.draggable-list li');
+  draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', dragStart);
+  });
+
+  dragListItems.forEach(item => {
+    item.addEventListener('dragover', dragOver);
+    item.addEventListener('drop', dragDrop);
+    item.addEventListener('dragenter', dragEnter);
+    item.addEventListener('dragleave', dragLeave);
+  });
+}
+```
+
+```js
+listItem.querySelector('.draggable').innerText.trim();
+
+listItem.querySelector
+
++this.getAttribute(
+```
+
+```js
+.map(a => ({ value: a, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(a => a.value)
+    .forEach((person, index) => {
+```
+
 <img src="./jorder.png" width="50%"/>
 <img src="./jorder1.png" width="50%"/>
 <img src="./jorder2.png" width="50%"/>
