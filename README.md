@@ -2,7 +2,8 @@
 
 Simple but effective drag and drop like with order checker for many use cases, namely studying / TechED implementations.
 
-### Snippets of some scripts that make this work:
+### Snippets of some JS blocks used in this project: 
+
 ```js
 function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable');
