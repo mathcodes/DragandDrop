@@ -8,6 +8,7 @@
   --accent1-color:#ff3838;
   --accent2-color:#3ae374;
   --dark-color: #141324;
+  --bs-body-bg: #444444;
 }
 
 * {
@@ -109,4 +110,10 @@ header {
 
 .person-name {
   font-size: 1.2rem;
+}
+
+.label{
+  display: block;
+    width: fit-content;
+  background-color:#0b7fd8;
 }
