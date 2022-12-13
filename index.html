@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Musical Timelines</title>
+
+  <link rel="icon" href="https://www.jonchristie.net/favicon.png">
+
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin="anonymous"></script>
   <!-- JavaScript Bundle with Popper -->
@@ -23,7 +25,9 @@
     <h3>Prove your knowledge by choosing a category and ordering the list chronologically.</h3>
 
     <div class="card flex mx-auto" style="width: 18rem;">
-      <div class="card-body mx-auto" >
+
+      <div class="card-body mx-auto">
+
         <select class="form-select" id="myList" aria-label="Default select example">
           <option selected>Choose a category</option>
           <option id="jazz" value="jazz">Jazz</option>
@@ -32,18 +36,11 @@
         </select>
       </div>
     </div>
-
-
     <h2 class="label mx-auto"><span class="output"></span></h2>
-
-
-
     <!-- <button onclick="getOption()"> Check option </button> -->
     <button onclick="createList()"> Create List </button>
-
     <p>
       Fix the order of the timeline by dragging and dropping the items into chronological order.
-
     </p>
 
     <ul class="draggable-list" id="draggable-list"></ul>
@@ -54,5 +51,4 @@
   </div>
   <script src="script.js"></script>
 </body>
-
 </html>
